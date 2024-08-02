@@ -1,0 +1,9 @@
+<div class="container">
+
+    <h1>Get absences</h1>
+    <button (click)="getAbsences()">Get absences</button>
+
+    <li *ngFor="let absence of absences">
+        <span class="badge">{{absence.FirstName}} {{absence.PartialTimeFrom}}</span>
+    </li>
+</div>

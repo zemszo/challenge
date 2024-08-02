@@ -1,0 +1,36 @@
+<div class="container">
+
+    <h1>Get users</h1>
+    <button (click)="getUsers()">Get users</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td><span class="pointer text-danger"><i class="fas fa-trash-alt"></i></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div class="container">
+
+    <h1>Add user</h1>
+    First name: <input type="text" [(ngModel)]="user.firstName" />
+    Last name: <input type="text" [(ngModel)]="user.lastName" />
+    Email: <input type="text" [(ngModel)]="user.email" />
+    <button (click)="addUser()">Add user</button>
+
+</div>
